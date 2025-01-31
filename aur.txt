@@ -1,0 +1,2 @@
+tokyonight-gtk-theme-git
+xcursor-simp1e-tokyo-night
