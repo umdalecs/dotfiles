@@ -1,0 +1,1 @@
+Copy-Item -Path "$HOME\Documents\dotfiles\powershell\alecs.omp.json" -Destination "$env:posh_themes_path\alecs.omp.json"

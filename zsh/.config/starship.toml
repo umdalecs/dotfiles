@@ -1,0 +1,12 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+format = '$all'
+
+[rust]
+symbol = ' '
+version_format = "${major}.${minor}"
+
+[package]
+disabled = true
