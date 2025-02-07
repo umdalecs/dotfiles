@@ -1,1 +1,6 @@
-Copy-Item -Path "$HOME\Documents\dotfiles\powershell\alecs.omp.json" -Destination "$env:posh_themes_path\alecs.omp.json"
+$current_dir=Get-Location
+
+Write-Host "Creando links simbólicos"
+
+New-Item -ItemType SymbolicLink -Target $current_dir -Path $HOME\Documents\powershell
+New-Item -ItemType SymbolicLink -Target $current_dir\alecs.omp.json  -Path $env:POSH_THEMES_PATH\alecs.omp.json
