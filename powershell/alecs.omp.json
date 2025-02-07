@@ -2,48 +2,59 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#e06c75",
-          "style": "plain",
-          "template": "{{.UserName}}",
-          "type": "text"
-        },
-        {
-          "foreground": "#abb2bf",
-          "style": "plain",
-          "template": "\u279c",
-          "type": "text"
-        },
-        {
-          "foreground": "#98c379",
           "properties": {
+            "cache_duration": "none"
+          },
+          "template": "{{ .UserName }}",
+          "foreground": "#e06c75",
+          "type": "text",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "➜ ",
+          "foreground": "#abb2bf",
+          "type": "text",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
             "style": "folder"
           },
-          "style": "plain",
-          "template": "{{.Folder}}",
-          "type": "path"
+          "template": "{{ .Folder }}",
+          "foreground": "#98c379",
+          "type": "path",
+          "style": "plain"
         },
         {
-          "foreground": "#D0666F",
           "properties": {
-            "branch_icon": ""
+            "branch_icon": "\ue709 ",
+            "cache_duration": "none"
           },
-          "style": "plain",
-          "template": "<#5FAAE8>(</>{{.HEAD}}<#5FAAE8>)</>",
-          "type": "git"
+          "template": "<#5FAAE8>(</>{{ .HEAD }}<#5FAAE8>)</>",
+          "foreground": "#D0666F",
+          "type": "git",
+          "style": "plain"
         },
         {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "✗",
           "foreground": "#BF616A",
-          "style": "plain",
-          "template": "\u2717",
-          "type": "exit"
+          "type": "exit",
+          "style": "plain"
         }
-      ],
-      "type": "prompt"
+      ]
     }
   ],
-  "final_space": true,
-  "version": 2
+  "version": 3,
+  "final_space": true
 }
