@@ -8,4 +8,4 @@ I mainly manage this with the [*GNU stow*](https://www.gnu.org/software/stow/) p
 
 --- 
 
-Yep, i deleted bloatware, so currently this is just zsh and kitty configuration files for unix systems (i only use linux, mainly arch) and powershell configuration for my windows systemsand indeed here are windows configuration files too
+Yep, i deleted bloatware, so currently this is just zsh and kitty configuration files for unix systems (i only use linux, mainly arch) and powershell configuration for my windows systems and indeed here are windows configuration files too
