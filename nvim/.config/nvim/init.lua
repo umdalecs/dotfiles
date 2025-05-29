@@ -35,16 +35,13 @@ require('lazy').setup({
 })
 
 require('tokyonight').setup({
-    style = "night",   -- Puedes elegir entre "night", "storm", o "day"
-    transparent = true,  -- Esto hace que el fondo sea transparente
-    terminal_colors = true,  -- Usar los colores de terminal personalizados
+    style = "night",   
+    transparent = true,
+    terminal_colors = true,
     styles = {
-        comments = { italic = true },
         keywords = { bold = true },
         functions = { bold = true },
-        variables = { italic = true },
     },
-    sidebars = { "qf", "vista_kind", "terminal", "packer" }, -- Opcional: cambiar color de las ventanas laterales
 })
 
 vim.cmd [[colorscheme tokyonight]]
@@ -76,7 +73,7 @@ vim.keymap.set('n', '<Leader>n', ':enew<CR>', { noremap = true, silent = true })
 
 
 require('lualine').setup {
-    options = { theme = 'vim' },
+    options = { theme = 'auto' },
     sections = {
         lualine_a = {'mode'},
         lualine_b = {'branch', 'diff'},
@@ -98,6 +95,9 @@ require("mason").setup({
 })
 
 local lspconfig = require('lspconfig')
+
+vim.lsp.enable("clangd")
+vim.lsp.config("clangd", {})
 
 require'nvim-treesitter.configs'.setup {
     ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
