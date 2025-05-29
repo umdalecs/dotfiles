@@ -1,0 +1,30 @@
+* {
+    font-family: "Hack Nerd Font", "Font Awesome 6 Free", sans-serif;
+    border: none;
+    border-radius: 0;
+    font-size: 16px;
+    min-height: 0;
+}
+
+window#waybar {
+    border-bottom: 1px solid #555555;
+    border-radius: 5px;
+    background-color: #000000; 
+    color: #ffffff;
+}
+
+#workspaces button {
+    margin-right: 20px;
+    background: transparent;
+    color: white;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button.active {
+    border-bottom: 1px solid red;
+}
+
+#window, #window, #clock, #network {
+    margin: 0 10px;
+}
+

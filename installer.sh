@@ -18,4 +18,6 @@ sudo pacman -Syu
 # Install the sofware
 sudo pacman -S - < programs.txt
 
-#
+# Install fonts
+sudo pacman -S - < fonts.txt
+

@@ -156,3 +156,9 @@ show-icons: true;
   }
 }
 
+
+//@theme "/usr/share/rofi/themes/tokyonight.rasi"
+
+//@theme "/usr/share/rofi/themes/tokyonight_big1.rasi"
+
+@theme "/usr/share/rofi/themes/tokyonight.rasi"
