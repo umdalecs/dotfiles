@@ -1,8 +1,6 @@
-aspnet-runtime-8.0
 bat
 bitwarden
 discord
-dotnet-sdk-8.0
 font-manager
 git
 github-cli

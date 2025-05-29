@@ -21,3 +21,11 @@ sudo pacman -S - < programs.txt
 # Install fonts
 sudo pacman -S - < fonts.txt
 
+paru -S - < aur.txt
+
+stow hyprland
+stow kitty
+stow nvim
+stow rofi
+stow waybar
+stow zsh
