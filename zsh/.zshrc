@@ -29,12 +29,12 @@ TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 # make less more friendly for non-text input files, see lesspipe(1)
 #[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-alias ls='lsd --color=auto'
+alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
 # some more ls aliases
-alias cat='bat'
+# alias cat='bat'
 alias ll='ls -l'
 alias la='ls -la'
 alias l='ls -CF'
@@ -50,3 +50,7 @@ source /usr/share/nvm/init-nvm.sh
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 eval "$(starship init zsh)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
