@@ -1,8 +1,7 @@
 # umdalecs doftiles repo
 
 Here is where i save my dotfiles 
-(a fancy way to call configuration files for unix systems, 
-and indeed here are windows configuration files too).
+(a fancy way to call configuration files for unix systems).
 
 ---
 
