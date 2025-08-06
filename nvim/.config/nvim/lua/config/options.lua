@@ -18,4 +18,3 @@ vim.o.swapfile = false
 vim.o.lazyredraw = true
 vim.o.history = 1000
 
-vim.cmd.colorscheme('retrobox')
