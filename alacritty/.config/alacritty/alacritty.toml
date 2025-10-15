@@ -1,12 +1,13 @@
 general.import = [
-  "~/.config/alacritty/catppuccin-frappe.toml",
+  "~/.config/alacritty/catppuccin-mocha.toml",
 ]
 
 [window]
-padding = {x=10,y=10}
+padding = {x=5,y=5}
 decorations="None"
 startup_mode = "Maximized"
+opacity=0.9
 
 [font]
 normal={family="FiraCode Nerd Font", style="Regular"}
-size=18
+size=11.25
