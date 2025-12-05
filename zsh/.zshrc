@@ -41,15 +41,7 @@ if [ -d "$FNM_PATH" ]; then
   eval "`fnm env`"
 fi
 
-# bun completions
-[ -s "/home/alecs/.bun/_bun" ] && source "/home/alecs/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-. "/home/alecs/.deno/env"
-. "$HOME/.local/bin/env"
+
