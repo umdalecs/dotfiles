@@ -1,47 +1,86 @@
-setopt autocd              # change directory just by typing its name
-#setopt correct            # auto correct mistakes
-setopt interactivecomments # allow comments in interactive mode
-setopt magicequalsubst     # enable filename expansion for arguments of the form ‘anything=expression’
-setopt nonomatch           # hide error message if there is no match for the pattern
-setopt notify              # report the status of background jobs immediately
-setopt numericglobsort     # sort filenames numerically when it makes sense
-setopt promptsubst         # enable command substitution in prompt
+# ===========================
+# Options
+# ===========================
+setopt autocd
+setopt interactivecomments
+setopt magicequalsubst
+setopt nonomatch
+setopt notify
+setopt numericglobsort
 
-# History configurations
+# ===========================
+# History
+# ===========================
 HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=2000
-setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
-setopt hist_ignore_dups       # ignore duplicated commands history list
-setopt hist_ignore_space      # ignore commands that start with space
-setopt hist_verify            # show command with history expansion to user before running it
 
-# force zsh to show the complete history
+HISTSIZE=5000
+SAVEHIST=5000
+
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_verify
+
 alias history="history 0"
 
-eval "$(starship init zsh)"
+# ===========================
+# Plugins
+# ===========================
+if [[ -f "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
+  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+elif [[ -f "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
 
-source "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
-source "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+if [[ -f "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
+  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+elif [[ -f "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] then
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
-TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
+# ===========================
+# Aliases
+# ===========================
+if command -v lsd &>/dev/null; then
+  alias ls='lsd -l'
+else
+  alias ls='ls -l --color=auto'
+fi
 
-alias ls='lsd -l'
-alias la='lsd -la'
+command -v bat &>/dev/null && alias cat='bat'
+
+if command -v nvim &>/dev/null; then
+  alias vim="nvim"
+  alias vi="nvim"
+fi
+
+alias la='ls -la'
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
-alias vim="nvim"
-alias vi="nvim"
 
-# fnm
-FNM_PATH="/home/alecs/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
-fi
+# ===========================
+# JetBrains
+# ===========================
+export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# ===========================
+# Cargo (Rust)
+# ===========================
+command -v cargo &>/dev/null && source "$HOME/.cargo/env"
+
+# ===========================
+# FNM (Node)
+# ===========================
+command -v fnm &>/dev/null && eval "$(fnm env --shell zsh)"
+
+# ===========================
+# SDKMAN
+# ===========================
 export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
+# ===========================
+# Prompt
+# ===========================
+eval "$(starship init zsh)"
