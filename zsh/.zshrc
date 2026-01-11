@@ -42,9 +42,9 @@ fi
 # Aliases
 # ===========================
 if command -v lsd &>/dev/null; then
-  alias ls='lsd -l'
+  alias ls='lsd'
 else
-  alias ls='ls -l --color=auto'
+  alias ls='ls --color=auto'
 fi
 
 command -v bat &>/dev/null && alias cat='bat'
@@ -55,6 +55,7 @@ if command -v nvim &>/dev/null; then
 fi
 
 alias la='ls -la'
+alias ll='ls -l'
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
@@ -67,7 +68,7 @@ export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
 # ===========================
 # Cargo (Rust)
 # ===========================
-command -v cargo &>/dev/null && source "$HOME/.cargo/env"
+command -v rustup &>/dev/null && source "$HOME/.cargo/env"
 
 # ===========================
 # FNM (Node)
@@ -79,6 +80,16 @@ command -v fnm &>/dev/null && eval "$(fnm env --shell zsh)"
 # ===========================
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+
+# ===========================
+# Bun
+# ===========================
+if [[ -s "/home/alecs/.bun/_bun" ]] then
+    source "/home/alecs/.bun/_bun"
+
+    export BUN_INSTALL="$HOME/.bun"
+    export PATH="$BUN_INSTALL/bin:$PATH"
+fi 
 
 # ===========================
 # Prompt
