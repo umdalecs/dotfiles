@@ -1,0 +1,21 @@
+[general]
+import = [
+  "~/.config/alacritty/alacritty-theme/themes/catppuccin_mocha.toml"
+]
+
+[window]
+dimensions = { columns = 0, lines = 0 }
+padding = { x = 10, y = 0 }
+dynamic_padding = false
+decorations = "None"
+opacity = 0.9
+blur = false
+startup_mode = "Maximized"
+# title = "Alacritty"
+dynamic_title = true
+
+[font]
+normal = { family = "Hack Nerd Font", style = "Regular" }
+size = 16
+
+[keyboard]
