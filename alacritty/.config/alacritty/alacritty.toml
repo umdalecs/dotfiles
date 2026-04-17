@@ -19,3 +19,7 @@ normal = { family = "Hack Nerd Font", style = "Regular" }
 size = 16
 
 [keyboard]
+
+[terminal.shell]
+program="/bin/zsh"
+args = ["-c", "tmux attach-session -t main || tmux new-session -s main"]
