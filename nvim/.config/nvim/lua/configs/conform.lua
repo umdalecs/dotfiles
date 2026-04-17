@@ -3,6 +3,8 @@ local options = {
     lua = { "stylua" },
     css = { "prettier" },
     html = { "prettier" },
+    java = { "google-java-format" },
+    kotlin = { "ktlint" },
     go = { "goimports", "golines", "gofmt" },
   },
 
