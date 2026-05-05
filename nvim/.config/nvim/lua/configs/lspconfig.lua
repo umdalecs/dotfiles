@@ -11,6 +11,7 @@ local servers = {
   "gopls",
   "jdtls",
   "kotlin_language_server",
+  "rust_analyzer",
 }
 
 lspconfig.gopls.setup = {
