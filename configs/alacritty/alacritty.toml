@@ -1,0 +1,16 @@
+
+[window]
+dimensions = { columns = 0, lines = 0 }
+padding = { x = 0, y = 10 }
+dynamic_padding = false
+decorations = "None"
+opacity = 0.9
+blur = false
+startup_mode = "Maximized"
+# title = "Alacritty"
+dynamic_title = true
+
+[font]
+normal = { family = "JetBrains Mono Nerd Font", style = "Regular" }
+size = 14
+offset = { x = 0, y = 0 }
