@@ -15,16 +15,16 @@
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
-          home-manager.nixosModules.default 
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = { inherit inputs; };
+            home-manager.nixosModules.default 
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = { inherit inputs; };
 
-              users.alecs = import ./home.nix;
-            };
-          }
+                users.alecs = import ./home.nix;
+              };
+            }
         ];
       };
   };
