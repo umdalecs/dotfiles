@@ -12,4 +12,3 @@ dynamic_title = true
 normal = { family = "JetBrains Mono Nerd Font", style = "Regular" }
 size = 14
 offset = { x = 0, y = 0 }
-

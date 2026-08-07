@@ -21,18 +21,18 @@
 
   home.file = {
     ".zshrc".source = 
-      config.lib.file.mkOutOfStoreSymlink "/home/alecs/dotfiles/configs/.zshrc";
+      config.lib.file.mkOutOfStoreSymlink ../configs/zsh/.zshrc;
     ".tmux.conf".source =  
-      config.lib.file.mkOutOfStoreSymlink "/home/alecs/dotfiles/configs/.tmux.conf";
+      config.lib.file.mkOutOfStoreSymlink ../configs/.tmux.conf;
   };
 
   xdg.configFile = {
     "alacritty" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/alecs/dotfiles/configs/alacritty";
+      source = config.lib.file.mkOutOfStoreSymlink ../configs/alacritty;
       recursive = true;
     };
     "nvim" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/alecs/dotfiles/configs/nvim";
+      source = config.lib.file.mkOutOfStoreSymlink ../configs/nvim;
       recursive = true;
     };
   };  
