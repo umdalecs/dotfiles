@@ -71,6 +71,7 @@
     gnomeExtensions.dash-to-dock
     gnomeExtensions.appindicator
     gnomeExtensions.caffeine
+    gnome-tweaks
     nautilus
     docker
 
@@ -92,6 +93,7 @@
     jetbrains-toolbox
 
     discord
+    obs-studio
   ];
 
   nixpkgs.config.allowUnfree = true;
