@@ -32,7 +32,7 @@
       recursive = true;
     };
     "nvim" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/alecs/dotfiles/configs/nvim/.config/alacritty";
+      source = config.lib.file.mkOutOfStoreSymlink "/home/alecs/dotfiles/configs/nvim/.config/nvim";
       recursive = true;
     };
   };  
