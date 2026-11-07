@@ -1,3 +1,13 @@
+[terminal.shell]
+program = "tmux"
+args = [
+  "new-session",
+  "-A",
+  "-D",
+  "-s",
+  "main"
+]
+
 [window]
 dimensions = { columns = 0, lines = 0 }
 padding = { x = 0, y = 10 }
@@ -9,6 +19,6 @@ startup_mode = "Maximized"
 dynamic_title = true
 
 [font]
-normal = { family = "JetBrains Mono Nerd Font", style = "Regular" }
+normal = { family = "FiraCode Nerd Font", style = "Regular" }
 size = 14
 offset = { x = 0, y = 0 }
