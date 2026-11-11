@@ -15,7 +15,7 @@ args = [
 
 [window]
 dimensions = { columns = 0, lines = 0 }
-padding = { x = 0, y = 10 }
+padding = { x = 10, y = 10 }
 dynamic_padding = false
 decorations = "Full"
 opacity = 0.9
