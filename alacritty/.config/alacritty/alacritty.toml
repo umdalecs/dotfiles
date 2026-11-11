@@ -1,3 +1,8 @@
+[general]
+import = [
+  "~/.config/alacritty/theme/mocha.toml",
+]
+
 [terminal.shell]
 program = "tmux"
 args = [
@@ -12,7 +17,7 @@ args = [
 dimensions = { columns = 0, lines = 0 }
 padding = { x = 0, y = 10 }
 dynamic_padding = false
-decorations = "None"
+decorations = "Full"
 opacity = 0.9
 blur = false
 startup_mode = "Maximized"
