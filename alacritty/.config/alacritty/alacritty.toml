@@ -3,16 +3,6 @@ import = [
   "~/.config/alacritty/theme/mocha.toml",
 ]
 
-[terminal.shell]
-program = "tmux"
-args = [
-  "new-session",
-  "-A",
-  "-D",
-  "-s",
-  "main"
-]
-
 [window]
 dimensions = { columns = 0, lines = 0 }
 padding = { x = 10, y = 10 }
